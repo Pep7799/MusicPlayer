@@ -1,0 +1,38 @@
+.song-container {
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 40px;
+
+}
+
+.song-image {
+
+    width: 20%;
+    margin-bottom: 50px;
+    border-radius: 50%;
+}
+
+.song-name {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.song-artist {
+    font-size: 20px;
+}
+
+@media screen and (max-width:768px) {
+    .song-image {
+        width: 50%;
+    }
+    .song-name {
+        font-size: 20px;
+    }
+    .song-artist {
+        font-size: 15px;
+    }
+    
+}

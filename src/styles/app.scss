@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: rgb(234, 223, 162);
+}
+
+h3, h4 {
+    font-weight: 500;
+}
+
+h1, h2, h3{
+    color: rgb(61, 55, 55);
+
+}
+.App {
+    transition: all 0.5s ease;
+}
+
+.active-lib {
+    margin-left: 20%;
+}
+
+@import './player';
+@import './song';
+@import './library';
+@import './navbar';
