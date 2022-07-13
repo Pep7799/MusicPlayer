@@ -64,20 +64,18 @@ const Player = ({
      
     }
     if (direction === "skip-back") {
-      if ((currentIndex - 1) % songs.length ===  -1){
+      if (currentIndex === 0) {
        await setCurrentSong(songs[songs.length - 1]);
-       libHandler(songs[songs.length - 1])
-       if(isPlaying) audioRef.current.play();
-       return;
+       libHandler(songs[(currentIndex -1)% songs.length])
+      } else {
+        await setCurrentSong(songs[(currentIndex - 1) % songs.length]);
+        libHandler(songs[(currentIndex - 1) % songs.length]);
       }
-      await setCurrentSong(songs[(currentIndex - 1 ) % songs.length])
-      libHandler(songs[(currentIndex - 1 ) % songs.length])
     }
-       if(isPlaying) audioRef.current.play();
+    audioRef.current.play();
+    setIsPlaying(true);
+  };
 
-     
-    }
-   
   const timeCheck = {                                     //time styles
     transform: `translateX(${songTime.timePercent}%)`,
   };
